@@ -1,0 +1,3 @@
+service:
+  redis:
+    uri: "redis:6379"

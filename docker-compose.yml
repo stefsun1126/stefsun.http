@@ -1,0 +1,16 @@
+version: "3.6"
+
+services:
+  redis:
+    container_name: "redis"
+    image: redis:alpine
+    command: redis-server
+    ports: 
+      - "6379:6379"
+
+  go:
+    container_name: "myserver"
+    build:
+      context: .
+    ports:
+      - "8080:8080"
